@@ -1,5 +1,6 @@
 - name: Nginx deplymnet
   hosts: localhost
+  ansible_user: root
   vars:
     svc_name: nginxweb
   tasks:
