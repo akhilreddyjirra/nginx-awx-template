@@ -1,0 +1,11 @@
+- name: Nginx deplymnet
+  hosts: localhost
+  vars:
+    svc_name: nginxweb
+  tasks:
+  - name: Deploy stack from a compose file
+    docker_stack:
+      state: present
+      name: "{{ svc_name }}"
+      compose:
+        - nginx.yml
